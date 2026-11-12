@@ -9,9 +9,11 @@ import model.Vetor;
 public class Main {
   public static void main(String[] args) {
     System.out.println("Iniciando o programa...");
+    String caminhoArquivoPesos = "pesos.dat"; // Caminho do arquivo de pesos
+    // String caminhoArquivoPesos = "pesosT2.dat"; // Caminho do arquivo de pesos
 
     Pesos pesos = null;
-    try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("pesos.dat"))) {
+    try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(caminhoArquivoPesos))) {
       // Tem que ler na mesma ordem em que foram salvos
       Vetor w1Carregado = (Vetor) in.readObject();
       Vetor w2Carregado = (Vetor) in.readObject();

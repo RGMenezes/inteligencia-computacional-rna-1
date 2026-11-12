@@ -74,6 +74,8 @@ public class IA {
       boolean finalEpoca = index == treino.length - 1; // Verifica se está no final da época
       boolean treinoMaximo = contador >= treinoLimite; // Verifica se atingiu o número máximo de treinos
 
+      if (treinoMaximo) System.out.println("\n|| Treino máximo atingido ||");
+
       condicaoParada = finalEpoca && (erroAbaixoLimite || treinoMaximo);
 
     } while (condicaoParada == false);
